@@ -18,6 +18,7 @@ import javax.ws.rs.core.MediaType;
  *
  * @author jose5
  */
+//holaaaa
 @Path("WSUMG")
 public class GenericResource {
 
