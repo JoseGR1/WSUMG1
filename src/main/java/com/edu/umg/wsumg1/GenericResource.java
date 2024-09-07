@@ -12,6 +12,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PUT;
 import javax.ws.rs.core.MediaType;
+import org.json.simple.JSONObject;
 
 /**
  * REST Web Service
@@ -33,8 +34,10 @@ public class GenericResource {
     @Produces (MediaType.TEXT_PLAIN)
     public String pruebaUMG(){
         System.out.println("Entrando a consumir pruebaUMG");
-        
-        return "Hola mundo WS";
+        JSONObject json = new JSONObject();
+        json.put("Nombre", "Jose");
+        json.put("Apellido", "Gonzalez");
+        return json.toJSONString();
     }
     
     
