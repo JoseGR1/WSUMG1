@@ -13,6 +13,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PUT;
 import javax.ws.rs.core.MediaType;
 import org.json.simple.JSONObject;
+import umg.edu.gt.base64.Base64Util;
 
 /**
  * REST Web Service
@@ -37,7 +38,11 @@ public class GenericResource {
         JSONObject json = new JSONObject();
         json.put("Nombre", "Jose");
         json.put("Apellido", "Gonzalez");
-        return json.toJSONString();
+        
+        Base64Util baseutil = new Base64Util();
+        
+        
+        return baseutil.codificar(json);
     }
     
     
